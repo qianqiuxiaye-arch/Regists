@@ -329,7 +329,7 @@ function renderUpdatesPage() {
     let html = `
       <div class="container" style="padding:36px 0 80px">
         <h1 style="font-size:28px;font-weight:700;margin-bottom:4px">📰 最新动态</h1>
-        <p style="color:var(--text-secondary);font-size:15px;margin-bottom:28px">出海公司注册相关政策动态、合规更新和行业资讯。由 WordPress 驱动。</p>
+        <p style="color:var(--text-secondary);font-size:15px;margin-bottom:28px">出海公司注册相关政策动态、合规更新和行业资讯。</p>
         <div class="updates-list">`;
 
     for (const item of posts) {
@@ -354,25 +354,23 @@ function renderUpdatesPage() {
     app.innerHTML = html;
   }
 
-  // Try WordPress.com API first
-  fetch(`${WP_API}/posts?number=20`)
-    .then(r => { if (!r.ok) throw new Error(); return r.json(); })
-    .then(data => {
-      const mapped = (data.posts || []).map(p => ({
-        title: p.title,
-        date: p.date.slice(0, 10),
-        category: Object.values(p.categories || {})[0]?.name || '动态',
-        summary: p.excerpt.replace(/<[^>]+>/g, '').trim().slice(0, 200),
-        tags: (p.tags || []).map(t => t.name),
-        link: p.URL
-      }));
-      renderPosts(mapped);
-    })
-    .catch(() => {
-      // Fallback: local data
-      const items = (GOGLOBAL_DATA.updates.updates || []).map(u => ({
-        ...u, tags: u.tags || [], link: u.sourceUrl
-      }));
-      renderPosts(items);
-    });
+  // JSONP: load from WordPress.com (bypasses CORS)
+  window._wpCb = function(data) {
+    const mapped = (data.posts || []).map(p => ({
+      title: p.title, date: p.date.slice(0, 10),
+      category: Object.values(p.categories || {})[0]?.name || '动态',
+      summary: p.excerpt.replace(/<[^>]+>/g, '').trim().slice(0, 200),
+      tags: (p.tags || []).map(t => t.name), link: p.URL
+    }));
+    renderPosts(mapped);
+  };
+  const s = document.createElement('script');
+  s.src = `${WP_API}/posts?number=20&callback=_wpCb`;
+  s.onerror = () => {
+    const items = (GOGLOBAL_DATA.updates.updates || []).map(u => ({
+      ...u, tags: u.tags || [], link: u.sourceUrl
+    }));
+    renderPosts(items);
+  };
+  document.head.appendChild(s);
 }
