@@ -323,7 +323,7 @@ function renderUpdatesPage() {
   const app = document.getElementById('app-updates');
   if (!app) return;
 
-  const WP_API = 'https://registscom.wordpress.com/wp-json/wp/v2';
+  const WP_API = 'https://public-api.wordpress.com/rest/v1.1/sites/registscom.wordpress.com';
 
   function renderPosts(posts) {
     let html = `
@@ -354,33 +354,24 @@ function renderUpdatesPage() {
     app.innerHTML = html;
   }
 
-  // Try WordPress API first
-  fetch(`${WP_API}/posts?per_page=20&_embed`)
-    .then(r => {
-      if (!r.ok) throw new Error('WP API unavailable');
-      return r.json();
-    })
-    .then(wpPosts => {
-      const mapped = wpPosts.map(p => ({
-        title: p.title.rendered,
+  // Try WordPress.com API first
+  fetch(`${WP_API}/posts?number=20`)
+    .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+    .then(data => {
+      const mapped = (data.posts || []).map(p => ({
+        title: p.title,
         date: p.date.slice(0, 10),
-        category: p._embedded?.['wp:term']?.[0]?.[0]?.name || '动态',
-        summary: p.excerpt?.rendered?.replace(/<[^>]+>/g, '').slice(0, 200) || '',
-        tags: (p._embedded?.['wp:term']?.[1] || []).map(t => t.name),
-        link: p.link
+        category: Object.values(p.categories || {})[0]?.name || '动态',
+        summary: p.excerpt.replace(/<[^>]+>/g, '').trim().slice(0, 200),
+        tags: (p.tags || []).map(t => t.name),
+        link: p.URL
       }));
       renderPosts(mapped);
     })
     .catch(() => {
       // Fallback: local data
       const items = (GOGLOBAL_DATA.updates.updates || []).map(u => ({
-        ...u,
-        title: u.title,
-        date: u.date,
-        category: u.category,
-        summary: u.summary,
-        tags: u.tags || [],
-        sourceUrl: u.sourceUrl
+        ...u, tags: u.tags || [], link: u.sourceUrl
       }));
       renderPosts(items);
     });
