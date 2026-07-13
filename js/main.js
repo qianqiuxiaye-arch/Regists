@@ -4,6 +4,7 @@
 // Utility
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+const escapeHtml = str => { const d = document.createElement('div'); d.textContent = str; return d.innerHTML; };
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
@@ -322,31 +323,65 @@ function renderUpdatesPage() {
   const app = document.getElementById('app-updates');
   if (!app) return;
 
-  const items = GOGLOBAL_DATA.updates.updates || [];
+  const WP_API = 'https://registscom.wordpress.com/wp-json/wp/v2';
 
-  let html = `
-    <div class="container" style="padding:36px 0 80px">
-      <h1 style="font-size:28px;font-weight:700;margin-bottom:4px">📰 最新动态</h1>
-      <p style="color:var(--text-secondary);font-size:15px;margin-bottom:28px">出海公司注册相关政策动态、合规更新和行业资讯。</p>
-      <div class="updates-list">`;
+  function renderPosts(posts) {
+    let html = `
+      <div class="container" style="padding:36px 0 80px">
+        <h1 style="font-size:28px;font-weight:700;margin-bottom:4px">📰 最新动态</h1>
+        <p style="color:var(--text-secondary);font-size:15px;margin-bottom:28px">出海公司注册相关政策动态、合规更新和行业资讯。由 WordPress 驱动。</p>
+        <div class="updates-list">`;
 
-  for (const item of items) {
-    const tagHtml = (item.tags || []).map(t => `<span class="glossary-related-tag">${t}</span>`).join('');
-    html += `
-      <div class="update-card">
-        <div class="update-card-top">
-          <span class="update-category">${item.category}</span>
-          <span class="update-date">${item.date}</span>
-        </div>
-        <h3 class="update-title">${item.title}</h3>
-        <p class="update-summary">${item.summary}</p>
-        <div style="display:flex;align-items:center;gap:8px">
-          <div>${tagHtml}</div>
-          ${item.sourceUrl ? `<a href="${item.sourceUrl}" target="_blank" rel="noopener noreferrer" class="update-source-link">查看来源 →</a>` : ''}
-        </div>
-      </div>`;
+    for (const item of posts) {
+      const tagHtml = (item.tags || []).map(t => `<span class="glossary-related-tag">${t}</span>`).join('');
+      const link = item.link || (item.sourceUrl ? item.sourceUrl : null);
+      html += `
+        <div class="update-card">
+          <div class="update-card-top">
+            <span class="update-category">${escapeHtml(item.category)}</span>
+            <span class="update-date">${item.date}</span>
+          </div>
+          <h3 class="update-title">${escapeHtml(item.title)}</h3>
+          <p class="update-summary">${escapeHtml(item.summary)}</p>
+          <div style="display:flex;align-items:center;gap:8px">
+            <div>${tagHtml}</div>
+            ${link ? `<a href="${link}" target="_blank" rel="noopener noreferrer" class="update-source-link">查看详情 →</a>` : ''}
+          </div>
+        </div>`;
+    }
+
+    html += `</div></div>`;
+    app.innerHTML = html;
   }
 
-  html += `</div></div>`;
-  app.innerHTML = html;
+  // Try WordPress API first
+  fetch(`${WP_API}/posts?per_page=20&_embed`)
+    .then(r => {
+      if (!r.ok) throw new Error('WP API unavailable');
+      return r.json();
+    })
+    .then(wpPosts => {
+      const mapped = wpPosts.map(p => ({
+        title: p.title.rendered,
+        date: p.date.slice(0, 10),
+        category: p._embedded?.['wp:term']?.[0]?.[0]?.name || '动态',
+        summary: p.excerpt?.rendered?.replace(/<[^>]+>/g, '').slice(0, 200) || '',
+        tags: (p._embedded?.['wp:term']?.[1] || []).map(t => t.name),
+        link: p.link
+      }));
+      renderPosts(mapped);
+    })
+    .catch(() => {
+      // Fallback: local data
+      const items = (GOGLOBAL_DATA.updates.updates || []).map(u => ({
+        ...u,
+        title: u.title,
+        date: u.date,
+        category: u.category,
+        summary: u.summary,
+        tags: u.tags || [],
+        sourceUrl: u.sourceUrl
+      }));
+      renderPosts(items);
+    });
 }
