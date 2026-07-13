@@ -354,23 +354,22 @@ function renderUpdatesPage() {
     app.innerHTML = html;
   }
 
-  // JSONP: load from WordPress.com (bypasses CORS)
-  window._wpCb = function(data) {
-    const mapped = (data.posts || []).map(p => ({
-      title: p.title, date: p.date.slice(0, 10),
-      category: Object.values(p.categories || {})[0]?.name || '动态',
-      summary: p.excerpt.replace(/<[^>]+>/g, '').trim().slice(0, 200),
-      tags: (p.tags || []).map(t => t.name), link: p.URL
-    }));
-    renderPosts(mapped);
-  };
-  const s = document.createElement('script');
-  s.src = `${WP_API}/posts?number=20&callback=_wpCb`;
-  s.onerror = () => {
-    const items = (GOGLOBAL_DATA.updates.updates || []).map(u => ({
-      ...u, tags: u.tags || [], link: u.sourceUrl
-    }));
-    renderPosts(items);
-  };
-  document.head.appendChild(s);
+  // Load from WordPress.com API
+  fetch(`${WP_API}/posts?number=20`)
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(data => {
+      const mapped = (data.posts || []).map(p => ({
+        title: p.title, date: p.date.slice(0, 10),
+        category: Object.values(p.categories || {})[0]?.name || '动态',
+        summary: p.excerpt.replace(/<[^>]+>/g, '').trim().slice(0, 200),
+        tags: (p.tags || []).map(t => t.name), link: p.URL
+      }));
+      renderPosts(mapped);
+    })
+    .catch(() => {
+      const items = (GOGLOBAL_DATA.updates.updates || []).map(u => ({
+        ...u, tags: u.tags || [], link: u.sourceUrl
+      }));
+      renderPosts(items);
+    });
 }
