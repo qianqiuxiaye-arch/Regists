@@ -1,0 +1,246 @@
+{
+  "regionId": "uk",
+  "pages": [
+    {
+      "id": "company-types",
+      "title": "公司类型与选择",
+      "icon": "🏢",
+      "sections": [
+        {
+          "title": "可选公司类型",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["类型", "特点", "适用场景", "税务处理", "最低要求"],
+              "rows": [
+                ["私人有限公司 (Ltd)", "独立法人；股东责任以出资额为限；最常用外资类型；股份不可公开交易", "绝大多数商业活动，包括跨境电商、科技公司、贸易", "企业所得税19-25%；年利润£50,000以下19%，£250,000以上25%", "至少1名股东；至少1名董事；须有注册地址；须委任公司秘书"],
+                ["公众有限公司 (PLC)", "股份可公开交易；须遵守更严格的监管要求", "拟在伦敦证交所上市的企业", "企业所得税25%", "至少2名董事；至少1名股东；£50,000最低股本"],
+                ["有限责任合伙 (LLP)", "独立法人；成员税负穿透至个人；灵活管理", "专业服务（律所/咨询/会计师事务所）", "成员按个人所得税率纳税", "至少2名成员；无股本"],
+                ["分公司 (Branch)", "非独立法人；外国公司在UK的延伸", "已有海外公司欲在英国开展业务", "外国公司利润须在英国申报纳税", "须在Companies House注册"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "Companies House - 公司类型", "url": "https://www.gov.uk/government/organisations/companies-house", "type": "official"}
+          ]
+        },
+        {
+          "title": "推荐：私人有限公司 (Ltd)",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "对外国人最友好的公司形式，无居住地限制",
+                "注册门槛极低——£1股本即可，无须验资",
+                "至少1名董事（不限国籍，无需本地董事）",
+                "公司秘书可由董事兼任",
+                "注册地址须在英国（服务商可提供）",
+                "最低年维护成本约£150（含注册地址和年度确认声明）"
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "UK Gov - 公司注册", "url": "https://www.gov.uk/set-up-business", "type": "official"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "registration-requirements",
+      "title": "注册要求与条件",
+      "icon": "📋",
+      "sections": [
+        {
+          "title": "外资设立私人有限公司核心要求",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["要求项", "具体要求"],
+              "rows": [
+                ["股东", "至少1名股东；可为个人或公司；无国籍限制；可100%外资持股"],
+                ["董事", "至少1名董事；无国籍限制；无需英国居民；可为外国人"],
+                ["公司秘书", "不强制（私人有限公司可豁免），但可自愿任命"],
+                ["注册地址", "须提供英国本地地址（可用服务商地址）；须在公司注册处公示"],
+                ["注册资本", "无最低要求；通常设为£1-£100"],
+                ["公司名称", "须以「Ltd」或「Limited」结尾；不可与已注册重名"],
+                ["PSC登记册", "须备存「重要控制人登记册」(PSC Register)，类似香港SCR"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "Companies House - 注册要求", "url": "https://www.gov.uk/company-registration", "type": "official"},
+            {"name": "UK Gov - 公司注册指南", "url": "https://www.gov.uk/set-up-business", "type": "official"}
+          ]
+        },
+        {
+          "title": "内地居民特别注意事项",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "中国公民可100%持股英国公司，无需英国本地董事",
+                "注册全程在线完成，无需亲赴英国",
+                "Companies House PSC登记册信息公开可查（包括股东姓名和住址）——隐私敏感者可考虑使用代名人服务",
+                "英国公司须在英国有「真实经营」才能维持低税率——纯壳公司可能被质疑",
+                "VAT（增值税）注册门槛为年营业额£85,000，跨境电商通常建议主动注册",
+                "如涉及欧盟市场，注意脱欧后英国与欧盟间关税安排变化"
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "HMRC - 税务指南", "url": "https://www.gov.uk/government/organisations/hm-revenue-customs", "type": "official"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "registration-process",
+      "title": "注册流程与步骤",
+      "icon": "📝",
+      "sections": [
+        {
+          "title": "注册步骤总览",
+          "content": [
+            {
+              "type": "steps",
+              "steps": [
+                {"step": 1, "title": "准备注册信息", "desc": "确定公司名称、注册地址、董事/股东信息、股本结构、SIC业务代码（Standard Industrial Classification）。", "duration": "1-2天", "fee": "免费"},
+                {"step": 2, "title": "提交注册申请", "desc": "通过 Companies House 在线系统提交注册。可选择自行提交或通过代理（Formation Agent）提交。", "duration": "即时-24小时", "fee": "£50（在线） / £71（纸质）"},
+                {"step": 3, "title": "领取注册证书", "desc": "注册成功后在线获取：(1) 公司注册证书 (Certificate of Incorporation)；(2) 公司章程 (Articles of Association)；(3) 公司唯一注册号。", "duration": "即时（在线）", "fee": "免费"},
+                {"step": 4, "title": "注册税务", "desc": "向HMRC注册公司税（Corporation Tax），通常在注册后3个月内完成。如年营业额超过£85,000须注册VAT。如雇用员工须注册PAYE。", "duration": "1-2周", "fee": "免费"},
+                {"step": 5, "title": "后续事项", "desc": "开设英国商业银行账户；提交确认声明（Confirmation Statement）每年一次；准备会计记录和年度账目申报。", "duration": "1-4周", "fee": "视银行和服务商而定"}
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "Companies House - 注册流程", "url": "https://www.gov.uk/company-registration", "type": "official"},
+            {"name": "UK Gov - 创业注册", "url": "https://www.gov.uk/set-up-business", "type": "official"}
+          ]
+        },
+        {
+          "title": "注册费用汇总",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["费用项目", "金额"],
+              "rows": [
+                ["公司注册（在线）", "£50"],
+                ["注册地址服务（年费）", "£30-£100/年"],
+                ["年度确认声明 (Confirmation Statement)", "£34/年"],
+                ["会计年账申报", "£300-£1,000/年"],
+                ["VAT注册", "免费"],
+                ["银行账户开户费", "£0-£100"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "Companies House - 费用表", "url": "https://www.gov.uk/company-registration-fees", "type": "official"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "post-registration",
+      "title": "注册后合规义务",
+      "icon": "✅",
+      "sections": [
+        {
+          "title": "年度合规要求",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["义务", "频率", "说明", "逾期后果"],
+              "rows": [
+                ["确认声明 (Confirmation Statement)", "每年", "向Companies House提交，确认公司信息准确", "最高£5,000罚款"],
+                ["年度账目申报 (Annual Accounts)", "每年", "向Companies House提交经审计（或豁免审计）的财务报表", "延迟1-3月£150，3-6月£375"],
+                ["公司税申报 (CT600)", "每年", "向HMRC提交公司税申报表及计算", "首次£100罚款，持续每日罚款"],
+                ["公司税缴纳", "每年", "账目结束后9个月内缴纳", "未缴部分2.75%年息"],
+                ["VAT申报（如注册）", "每季度", "提交VAT申报表并缴纳VAT", "逾期罚款从£400起"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "HMRC - 公司税", "url": "https://www.gov.uk/corporation-tax", "type": "official"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bank-account",
+      "title": "企业银行开户",
+      "icon": "🏦",
+      "sections": [
+        {
+          "title": "开户基本要求",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "公司注册证书 (Certificate of Incorporation)",
+                "公司章程 (Articles of Association)",
+                "公司注册号及Companies House摘要",
+                "董事和股东的有效护照及身份证件",
+                "董事个人住址证明（最近3个月内）",
+                "公司业务计划及预期交易量",
+                "资金来源说明",
+                "关联公司资料（如有内地公司）"
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "FCA - 银行开户指南", "url": "https://www.fca.org.uk/", "type": "official"}
+          ]
+        },
+        {
+          "title": "主流银行对比",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["银行", "最低存款", "开户周期", "特点"],
+              "rows": [
+                ["Wise Business", "£0", "1-2周", "多币种账户；跨境汇款汇率最优；全程在线"],
+                ["Revolut Business", "£0", "1-2周", "多币种；费用透明；适合初创企业"],
+                ["Starling Bank", "£0", "1-2周", "英国数字银行；开户快；API集成好"],
+                ["HSBC UK", "£0-£1,000", "2-4周", "传统大行；国际网络广；适合大额交易"],
+                ["Barclays", "£0-£500", "2-4周", "英国最大行之一；商业服务完善"],
+                ["Lloyds", "£0", "2-4周", "中小企业友好；传统银行服务"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "FCA - 银行注册机构", "url": "https://register.fca.org.uk/", "type": "official"}
+          ]
+        },
+        {
+          "title": "开户注意事项",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "数字银行（Wise/Revolut/Starling）对外国董事友好，全程在线开户",
+                "传统银行（HSBC/Barclays）通常要求董事亲临或通过视频面签",
+                "建议先用数字银行快速开立账户，后续再开通传统银行作为主账户",
+                "准备好内地母公司的业务合同和流水可提高传统银行开户成功率",
+                "英国KYC反洗钱审查严格，资金来源须清晰可溯",
+                "部分数字银行有账户交易限额，大额交易需升级账户"
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "FCA - 消费者指南", "url": "https://www.fca.org.uk/firms/authorisation", "type": "official"}
+          ]
+        }
+      ]
+    }
+  ]
+}

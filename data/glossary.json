@@ -1,0 +1,433 @@
+{
+  "glossary": [
+    {
+      "term": "LLC",
+      "full": "Limited Liability Company (有限责任公司)",
+      "category": "公司类型",
+      "regions": [
+        "us"
+      ],
+      "definition": "美国最受外资欢迎的公司形式。成员（股东）责任以出资额为限，利润可直接穿透至个人报税（Pass-through Taxation），避免双重征税。外国人可100%持有。",
+      "relatedTerms": [
+        "C-Corp",
+        "EIN",
+        "ITIN"
+      ]
+    },
+    {
+      "term": "C-Corp",
+      "full": "C Corporation (股份有限公司)",
+      "category": "公司类型",
+      "regions": [
+        "us"
+      ],
+      "definition": "美国标准的股份有限公司，是独立纳税实体。公司利润须缴纳联邦企业所得税（21%），股东分红时再缴纳个人税（双重征税）。适合有融资/上市计划的企业。",
+      "relatedTerms": [
+        "LLC",
+        "S-Corp"
+      ]
+    },
+    {
+      "term": "EIN",
+      "full": "Employer Identification Number (雇主识别号)",
+      "category": "税务",
+      "regions": [
+        "us"
+      ],
+      "definition": "美国国税局（IRS）分配给企业的税务识别号，相当于公司的「社会安全号」。用于税务申报、企业银行开户、雇员管理等。外国人可在IRS网站在线申请（需ITIN或SSN）。",
+      "relatedTerms": [
+        "ITIN",
+        "IRS",
+        "SSN"
+      ]
+    },
+    {
+      "term": "ITIN",
+      "full": "Individual Taxpayer Identification Number (个人纳税人识别号)",
+      "category": "税务",
+      "regions": [
+        "us"
+      ],
+      "definition": "IRS 发给没有资格获得 SSN 的外国人的个人税务识别号。外国人持有美国 LLC 时，用于申报穿透税务。申请需提交 W-7 表格并附护照认证件。",
+      "relatedTerms": [
+        "EIN",
+        "SSN",
+        "IRS"
+      ]
+    },
+    {
+      "term": "BOI",
+      "full": "Beneficial Ownership Information (受益所有人信息)",
+      "category": "合规",
+      "regions": [
+        "us"
+      ],
+      "definition": "根据《企业透明度法案》（CTA），美国新注册公司须在90天内向FinCEN申报受益所有人信息，包括姓名、出生日期、地址、身份证件等。信息变更须在30天内更新。",
+      "relatedTerms": [
+        "FinCEN",
+        "CTA"
+      ]
+    },
+    {
+      "term": "FinCEN",
+      "full": "Financial Crimes Enforcement Network (金融犯罪执法网络)",
+      "category": "监管机构",
+      "regions": [
+        "us"
+      ],
+      "definition": "美国财政部下属机构，负责打击洗钱和金融犯罪。2024年起管理BOI（受益所有人信息）申报系统。",
+      "relatedTerms": [
+        "BOI",
+        "CTA"
+      ]
+    },
+    {
+      "term": "ACRA",
+      "full": "Accounting and Corporate Regulatory Authority (会计与企业管制局)",
+      "category": "监管机构",
+      "regions": [
+        "singapore"
+      ],
+      "definition": "新加坡主管公司注册和监管的政府机构。所有公司须通过ACRA的BizFile+系统在线注册、提交年度申报。",
+      "relatedTerms": [
+        "BizFile+",
+        "UEN"
+      ]
+    },
+    {
+      "term": "IRAS",
+      "full": "Inland Revenue Authority of Singapore (新加坡国内税务局)",
+      "category": "监管机构",
+      "regions": [
+        "singapore"
+      ],
+      "definition": "新加坡的税务主管机关。负责企业税（17%）、GST（9%）、个人所得税的征收及优惠政策（如初创企业免税计划SUTE）的执行。",
+      "relatedTerms": [
+        "GST",
+        "SUTE"
+      ]
+    },
+    {
+      "term": "MAS",
+      "full": "Monetary Authority of Singapore (新加坡金融管理局)",
+      "category": "监管机构",
+      "regions": [
+        "singapore"
+      ],
+      "definition": "新加坡的中央银行和金融综合监管机构。负责银行监管、货币政策及反洗钱合规要求（如MAS Notice 626）。",
+      "relatedTerms": [
+        "MAS Notice 626",
+        "KYC"
+      ]
+    },
+    {
+      "term": "UEN",
+      "full": "Unique Entity Number (唯一实体编号)",
+      "category": "注册",
+      "regions": [
+        "singapore"
+      ],
+      "definition": "新加坡政府分配给所有注册实体（公司、组织、社团等）的唯一识别码。相当于公司的「身份证号」，用于税务、报关等所有政府事务。",
+      "relatedTerms": [
+        "ACRA",
+        "BizFile+"
+      ]
+    },
+    {
+      "term": "GST",
+      "full": "Goods and Services Tax (商品与服务税)",
+      "category": "税务",
+      "regions": [
+        "singapore"
+      ],
+      "definition": "新加坡的增值税（类似国内增值税），当前税率9%。年营业额超过100万新元的企业须注册GST。",
+      "relatedTerms": [
+        "IRAS",
+        "SUTE"
+      ]
+    },
+    {
+      "term": "SUTE",
+      "full": "Start-Up Tax Exemption (初创企业免税计划)",
+      "category": "税务",
+      "regions": [
+        "singapore"
+      ],
+      "definition": "新加坡为鼓励创业推出的税务优惠。新公司在首三个税务年度内，首20万新元应税收入享有大幅减免（首10万免税75%，后10万免税50%）。",
+      "relatedTerms": [
+        "IRAS",
+        "GST"
+      ]
+    },
+    {
+      "term": "CR",
+      "full": "Companies Registry (公司注册处)",
+      "category": "监管机构",
+      "regions": [
+        "hong-kong"
+      ],
+      "definition": "香港的公司注册主管机构，隶属于财经事务及库务局。负责公司注册、公司条例执行、公司信息管理及电子注册服务（e-Registry）。",
+      "relatedTerms": [
+        "NNC1",
+        "NAR1"
+      ]
+    },
+    {
+      "term": "IRD",
+      "full": "Inland Revenue Department (香港税务局)",
+      "category": "监管机构",
+      "regions": [
+        "hong-kong"
+      ],
+      "definition": "香港的税务主管机关。下设商业登记署，负责商业登记证的核发和续期；同时负责利得税（16.5%）的征收。",
+      "relatedTerms": [
+        "商业登记证",
+        "利得税"
+      ]
+    },
+    {
+      "term": "NNC1",
+      "full": "法团成立表格（NNC1）",
+      "category": "注册文件",
+      "regions": [
+        "hong-kong"
+      ],
+      "definition": "香港公司注册的核心申请表格，包含公司名称、地址、股东/董事/秘书资料、注册资本等信息。通过「注册易」系统在线提交。",
+      "relatedTerms": [
+        "CR",
+        "NAR1"
+      ]
+    },
+    {
+      "term": "NAR1",
+      "full": "周年申报表（Annual Return）",
+      "category": "注册文件",
+      "regions": [
+        "hong-kong"
+      ],
+      "definition": "香港公司每年须向公司注册处提交的周年申报表，更新公司最新资料。逾期提交将面临870-3,480港币罚款。",
+      "relatedTerms": [
+        "CR",
+        "NNC1"
+      ]
+    },
+    {
+      "term": "SCR",
+      "full": "重要控制人登记册（Significant Controllers Register）",
+      "category": "合规",
+      "regions": [
+        "hong-kong"
+      ],
+      "definition": "香港公司须备存的重要控制人登记册，记录对公司有重大控制权（持股25%以上或实质性控制）的人员信息。未合规最高可罚25,000港币及每日罚款。",
+      "relatedTerms": [
+        "CR"
+      ]
+    },
+    {
+      "term": "KYC",
+      "full": "Know Your Customer (了解你的客户)",
+      "category": "合规",
+      "regions": [
+        "hong-kong",
+        "singapore",
+        "us"
+      ],
+      "definition": "金融机构在开户时必须执行的客户身份识别和尽职调查流程。包括核实身份、了解资金来源、评估风险等级等。全球银行普遍要求，且日趋严格。",
+      "relatedTerms": [
+        "AML",
+        "CFT"
+      ]
+    },
+    {
+      "term": "AML",
+      "full": "Anti-Money Laundering (反洗钱)",
+      "category": "合规",
+      "regions": [
+        "hong-kong",
+        "singapore",
+        "us"
+      ],
+      "definition": "各国金融监管机构为防止洗钱活动而制定的一系列法律法规。企业银行开户、大额交易等场景均需遵守AML合规要求。",
+      "relatedTerms": [
+        "KYC",
+        "CFT",
+        "MAS"
+      ]
+    },
+    {
+      "term": "ODI",
+      "full": "Overseas Direct Investment (境外直接投资)",
+      "category": "合规",
+      "regions": [
+        "hong-kong",
+        "singapore"
+      ],
+      "definition": "中国内地企业或个人向境外进行直接投资时，须向中国商务部、发改委、外汇管理局等部门的备案/审批流程。涉及资金出境的海外公司设立通常需要ODI备案。",
+      "relatedTerms": [
+        "外商投资"
+      ]
+    },
+    {
+      "term": "TCSP",
+      "full": "Trust or Company Service Provider (信托或公司服务提供商)",
+      "category": "服务机构",
+      "regions": [
+        "hong-kong"
+      ],
+      "definition": "香港持牌提供信托或公司秘书服务的机构。香港公司须委任公司秘书，通常由TCSP持牌机构担任。TCSP须在香港公司注册处登记并持有TCSP牌照。",
+      "relatedTerms": [
+        "CR",
+        "公司秘书"
+      ]
+    },
+    {
+      "term": "BizFile+",
+      "full": "ACRA BizFile+ 系统",
+      "category": "注册系统",
+      "regions": [
+        "singapore"
+      ],
+      "definition": "ACRA的在线公司注册和管理系统。所有新加坡公司的注册、名称申请、年度申报、信息变更等均通过此系统完成。网址：bizfile.gov.sg",
+      "relatedTerms": [
+        "ACRA",
+        "UEN"
+      ]
+    },
+    {
+      "term": "公司秘书",
+      "full": "Company Secretary (公司秘书)",
+      "category": "注册要求",
+      "regions": [
+        "hong-kong",
+        "singapore"
+      ],
+      "definition": "公司法定职位，负责公司的行政合规管理，包括维护法定记录册、提交法定文件、安排董事会等。香港和新加坡均要求公司委任公司秘书。",
+      "relatedTerms": [
+        "TCSP",
+        "CR",
+        "ACRA"
+      ]
+    },
+    {
+      "term": "Registered Agent",
+      "full": "注册代理人",
+      "category": "注册要求",
+      "regions": [
+        "us"
+      ],
+      "definition": "美国各州要求公司在注册州须有一个注册代理人，负责接收法律文书（如传票、政府通知）。注册代理人须有该州实际地址，通常由专业服务机构担任。",
+      "relatedTerms": [
+        "LLC",
+        "Operating Agreement"
+      ]
+    },
+    {
+      "term": "穿透课税",
+      "full": "Pass-through Taxation (穿透课税)",
+      "category": "税务",
+      "regions": [
+        "us"
+      ],
+      "definition": "美国LLC的默认税务处理方式。公司本身不缴纳企业所得税，利润直接「穿透」到成员个人层面，由成员按个人所得税率申报纳税。避免双重征税，是外国人持有LLC的主要优势之一。",
+      "relatedTerms": [
+        "LLC",
+        "C-Corp",
+        "ITIN"
+      ]
+    },
+    {
+      "term": "双重征税",
+      "full": "Double Taxation (双重征税)",
+      "category": "税务",
+      "regions": [
+        "us"
+      ],
+      "definition": "C-Corp 结构下，公司利润先在实体层面缴纳企业所得税（21%），分红给股东时股东再缴纳个人所得税，同一笔利润被征税两次。LLC通过穿透课税可避免此问题。",
+      "relatedTerms": [
+        "C-Corp",
+        "LLC",
+        "穿透课税"
+      ]
+    },
+    {
+      "term": "利得税",
+      "full": "Profits Tax (利得税)",
+      "category": "税务",
+      "regions": [
+        "hong-kong"
+      ],
+      "definition": "香港的主要企业所得税，税率16.5%。实行地域来源征税原则——仅对源自香港的利润征税，离岸利润可申请豁免。无资本利得税、无增值税、无股息预扣税。",
+      "relatedTerms": [
+        "IRD",
+        "离岸收入豁免"
+      ]
+    },
+    {
+      "term": "离岸收入豁免",
+      "full": "Offshore Income Claim (离岸收入豁免)",
+      "category": "税务",
+      "regions": [
+        "hong-kong"
+      ],
+      "definition": "香港地域来源征税原则的核心应用。如公司利润全部来自香港以外地区（如跨境电商收入来自海外客户），可向税务局申请离岸收入豁免，无须缴付利得税。须提交审计报告和业务说明。",
+      "relatedTerms": [
+        "利得税",
+        "IRD"
+      ]
+    },
+    {
+      "term": "预扣税",
+      "full": "Withholding Tax (预扣税)",
+      "category": "税务",
+      "regions": [
+        "singapore",
+        "us"
+      ],
+      "definition": "付款方在向收款方支付特定款项（如股息、利息、特许权使用费）时，依法预先扣除并代缴的税款。新加坡向非居民支付的特定款项通常需预扣税；美国对外国股东的股息通常预扣30%。",
+      "relatedTerms": [
+        "IRD",
+        "IRS"
+      ]
+    },
+    {
+      "term": "资本利得税",
+      "full": "Capital Gains Tax (资本利得税)",
+      "category": "税务",
+      "regions": [
+        "hong-kong",
+        "singapore"
+      ],
+      "definition": "对出售资产（如股票、房产）所获利润征收的税。香港和新加坡均不征收资本利得税，这是两地作为国际商业枢纽的重要优势之一。",
+      "relatedTerms": [
+        "利得税",
+        "企业所得税"
+      ]
+    },
+    {
+      "term": "特许税",
+      "full": "Franchise Tax (特许税)",
+      "category": "税务",
+      "regions": [
+        "us"
+      ],
+      "definition": "美国部分州（如特拉华州、德克萨斯州）向在该州注册的公司征收的年度税，无论公司是否在该州实际经营。特拉华州最低年税$300，怀俄明州最低$60。",
+      "relatedTerms": [
+        "LLC",
+        "C-Corp"
+      ]
+    },
+    {
+      "term": "FBAR",
+      "full": "Foreign Bank Account Report (海外银行账户报告)",
+      "category": "合规",
+      "regions": [
+        "us"
+      ],
+      "definition": "美国纳税人（含持有美国公司的外国人）如境外金融账户总值超过$10,000，须每年向FinCEN申报FBAR（FinCEN Form 114）。逾期申报可能面临高额罚款。",
+      "relatedTerms": [
+        "FinCEN",
+        "IRS"
+      ]
+    }
+  ]
+}

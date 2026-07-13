@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regists CMS - 内容管理</title>
+  <style>
+    :root {
+      --bg: #f5f6fa;
+      --card: #fff;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --danger: #dc2626;
+      --danger-hover: #b91c1c;
+      --success: #059669;
+      --text: #1f2937;
+      --text-secondary: #6b7280;
+      --border: #e5e7eb;
+      --shadow: 0 1px 3px rgba(0,0,0,.08);
+      --radius: 8px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* Nav */
+    .nav {
+      background: #1e293b;
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav h1 { font-size: 18px; font-weight: 600; }
+    .nav-actions { display: flex; gap: 10px; align-items: center; }
+    .nav-actions a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 13px;
+    }
+    .nav-actions a:hover { color: #fff; }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 24px 20px 60px;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      top: 60px;
+      right: 20px;
+      padding: 12px 20px;
+      border-radius: var(--radius);
+      color: #fff;
+      font-size: 14px;
+      z-index: 200;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all .3s ease;
+      pointer-events: none;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+    .toast.success { background: var(--success); }
+    .toast.error { background: var(--danger); }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .controls h2 { font-size: 20px; }
+    .controls-right { display: flex; gap: 10px; }
+
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all .15s ease;
+      text-decoration: none;
+    }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-success { background: var(--success); color: #fff; }
+    .btn-success:hover { opacity: .9; }
+    .btn-danger { background: var(--danger); color: #fff; }
+    .btn-danger:hover { background: var(--danger-hover); }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+    }
+    .btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+    .btn-sm { padding: 5px 10px; font-size: 12px; }
+
+    /* Stats */
+    .stats-bar {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .stat-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      box-shadow: var(--shadow);
+      flex: 1;
+      min-width: 140px;
+    }
+    .stat-card .num {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .stat-card .label {
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    /* Card list */
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .card-body {
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .card-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .card-info h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .card-info .meta {
+      font-size: 12px;
+      color: var(--text-secondary);
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+    .card-info .meta .tag {
+      background: #eef2ff;
+      color: var(--primary);
+      padding: 1px 8px;
+      border-radius: 10px;
+      font-size: 11px;
+    }
+    .card-info .summary {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .card-actions {
+      display: flex;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    .card-actions .btn { white-space: nowrap; }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-secondary);
+    }
+    .empty-state .icon { font-size: 48px; margin-bottom: 12px; }
+
+    /* Modal (form) */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,.4);
+      z-index: 300;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 60px 20px;
+      overflow-y: auto;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal {
+      background: #fff;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 600px;
+      padding: 28px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.15);
+      animation: modalIn .2s ease;
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .modal h2 { font-size: 18px; margin-bottom: 20px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+    .form-group label .required { color: var(--danger); }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: inherit;
+      transition: border-color .15s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37,99,235,.1);
+    }
+    .form-group textarea { min-height: 100px; resize: vertical; }
+    .form-row { display: flex; gap: 12px; }
+    .form-row .form-group { flex: 1; }
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Confirm dialog */
+    .confirm-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,.4);
+      z-index: 400;
+      justify-content: center;
+      align-items: center;
+    }
+    .confirm-overlay.active { display: flex; }
+    .confirm-box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px 28px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 20px 60px rgba(0,0,0,.15);
+      text-align: center;
+    }
+    .confirm-box h3 { margin-bottom: 8px; }
+    .confirm-box p { font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; }
+    .confirm-box .btn-group { display: flex; gap: 10px; justify-content: center; }
+
+    @media (max-width: 640px) {
+      .controls { flex-direction: column; align-items: stretch; }
+      .controls-right { justify-content: stretch; }
+      .controls-right .btn { flex: 1; justify-content: center; }
+      .card-body { flex-direction: column; }
+      .card-actions { width: 100%; justify-content: flex-end; }
+      .form-row { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="nav">
+  <h1>📰 Regists CMS</h1>
+  <div class="nav-actions">
+    <a href="/index.html" target="_blank">🌐 预览站点</a>
+    <span style="color:#475569;font-size:12px">v1.0</span>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<div class="container">
+  <div class="controls">
+    <h2>最新动态管理</h2>
+    <div class="controls-right">
+      <button class="btn btn-outline" onclick="refreshList()">🔄 刷新</button>
+      <button class="btn btn-success" onclick="publish()">📦 发布到 data.js</button>
+      <button class="btn btn-primary" onclick="openForm()">➕ 新增动态</button>
+    </div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-card">
+      <div class="num" id="stat-total">-</div>
+      <div class="label">动态总数</div>
+    </div>
+    <div class="stat-card">
+      <div class="num" id="stat-published">-</div>
+      <div class="label">已发布到站点</div>
+    </div>
+  </div>
+
+  <div id="list-container">
+    <div class="empty-state">
+      <div class="icon">📭</div>
+      <h3>暂无动态</h3>
+      <p>点击上方「新增动态」按钮添加第一条内容</p>
+    </div>
+  </div>
+</div>
+
+<!-- Form Modal -->
+<div class="modal-overlay" id="form-modal">
+  <div class="modal">
+    <h2 id="form-title">新增动态</h2>
+    <form id="update-form" onsubmit="return false">
+      <input type="hidden" id="edit-id">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label><span class="required">*</span> 标题</label>
+          <input id="f-title" placeholder="如：美国BOI申报要求更新" required>
+        </div>
+        <div class="form-group" style="max-width:160px">
+          <label><span class="required">*</span> 日期</label>
+          <input id="f-date" type="date" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label><span class="required">*</span> 分类</label>
+          <select id="f-category">
+            <option value="站点公告">站点公告</option>
+            <option value="政策动态">政策动态</option>
+            <option value="合规指南">合规指南</option>
+            <option value="行业资讯">行业资讯</option>
+            <option value="平台更新">平台更新</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>标签（逗号分隔）</label>
+          <input id="f-tags" placeholder="如: 美国, BOI, 合规">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label><span class="required">*</span> 摘要</label>
+        <textarea id="f-summary" placeholder="简要描述动态内容..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>来源链接</label>
+        <input id="f-sourceUrl" placeholder="https://...（选填）">
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn btn-outline" onclick="closeForm()">取消</button>
+        <button type="button" class="btn btn-primary" onclick="save()">💾 保存</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Confirm Dialog -->
+<div class="confirm-overlay" id="confirm-overlay">
+  <div class="confirm-box">
+    <h3>⚠️ 确认删除</h3>
+    <p id="confirm-msg">确定要删除这条动态吗？</p>
+    <div class="btn-group">
+      <button class="btn btn-outline" onclick="closeConfirm()">取消</button>
+      <button class="btn btn-danger" id="confirm-btn" onclick="">删除</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const API = '/api/updates';
+let updates = [];
+
+// ----- Toast -----
+function showToast(msg, type = 'success') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast ' + type + ' show';
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+// ----- List -----
+async function refreshList() {
+  try {
+    const res = await fetch(API);
+    const data = await res.json();
+    updates = data.updates || [];
+    renderList();
+  } catch (e) {
+    showToast('加载失败: ' + e.message, 'error');
+  }
+}
+
+function renderList() {
+  const container = document.getElementById('list-container');
+  const totalEl = document.getElementById('stat-total');
+  totalEl.textContent = updates.length;
+
+  if (updates.length === 0) {
+    container.innerHTML = `<div class="empty-state"><div class="icon">📭</div><h3>暂无动态</h3><p>点击上方「新增动态」按钮添加第一条内容</p></div>`;
+    return;
+  }
+
+  const sorted = [...updates].sort((a, b) => b.date.localeCompare(a.date) || b.id.localeCompare(a.id));
+  const html = sorted.map(item => {
+    const tags = (item.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
+    return `<div class="card">
+      <div class="card-body">
+        <div class="card-info">
+          <h3>${escapeHtml(item.title)}</h3>
+          <div class="meta">
+            <span>📅 ${item.date}</span>
+            <span>📂 ${escapeHtml(item.category)}</span>
+            ${tags}
+            ${item.sourceUrl ? `<a href="${escapeHtml(item.sourceUrl)}" target="_blank" style="color:var(--primary)">🔗 来源</a>` : ''}
+          </div>
+          <div class="summary">${escapeHtml(item.summary)}</div>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-outline btn-sm" onclick="openForm('${item.id}')">✏️ 编辑</button>
+          <button class="btn btn-danger btn-sm" onclick="confirmDelete('${item.id}')">🗑️ 删除</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+  container.innerHTML = html;
+}
+
+// ----- Form -----
+function openForm(id) {
+  document.getElementById('form-title').textContent = id ? '编辑动态' : '新增动态';
+  const form = document.getElementById('update-form');
+  form.reset();
+  document.getElementById('edit-id').value = '';
+
+  if (id) {
+    const item = updates.find(u => u.id === id);
+    if (item) {
+      document.getElementById('edit-id').value = item.id;
+      document.getElementById('f-title').value = item.title;
+      document.getElementById('f-date').value = item.date;
+      document.getElementById('f-category').value = item.category;
+      document.getElementById('f-tags').value = (item.tags || []).join(', ');
+      document.getElementById('f-summary').value = item.summary;
+      document.getElementById('f-sourceUrl').value = item.sourceUrl || '';
+    }
+  } else {
+    document.getElementById('f-date').value = new Date().toISOString().slice(0, 10);
+  }
+  document.getElementById('form-modal').classList.add('active');
+}
+
+function closeForm() {
+  document.getElementById('form-modal').classList.remove('active');
+}
+
+async function save() {
+  const id = document.getElementById('edit-id').value;
+  const data = {
+    title: document.getElementById('f-title').value.trim(),
+    date: document.getElementById('f-date').value,
+    category: document.getElementById('f-category').value,
+    summary: document.getElementById('f-summary').value.trim(),
+    tags: document.getElementById('f-tags').value.split(',').map(t => t.trim()).filter(Boolean),
+    sourceUrl: document.getElementById('f-sourceUrl').value.trim() || '',
+  };
+
+  if (!data.title || !data.date || !data.category || !data.summary) {
+    showToast('请填写所有必填字段', 'error');
+    return;
+  }
+
+  try {
+    const method = id ? 'PUT' : 'POST';
+    const url = id ? API + '/' + id : API;
+    const res = await fetch(url, {
+      method,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) throw new Error((await res.json()).error || '保存失败');
+    showToast(id ? '✅ 更新成功' : '✅ 创建成功');
+    closeForm();
+    refreshList();
+  } catch (e) {
+    showToast('保存失败: ' + e.message, 'error');
+  }
+}
+
+// ----- Delete -----
+let deletingId = null;
+function confirmDelete(id) {
+  const item = updates.find(u => u.id === id);
+  deletingId = id;
+  document.getElementById('confirm-msg').textContent = `确定要删除「${item ? item.title : id}」吗？`;
+  document.getElementById('confirm-btn').onclick = doDelete;
+  document.getElementById('confirm-overlay').classList.add('active');
+}
+
+function closeConfirm() {
+  document.getElementById('confirm-overlay').classList.remove('active');
+  deletingId = null;
+}
+
+async function doDelete() {
+  if (!deletingId) return;
+  try {
+    const res = await fetch(API + '/' + deletingId, { method: 'DELETE' });
+    if (!res.ok) throw new Error('删除失败');
+    showToast('🗑️ 已删除');
+    closeConfirm();
+    refreshList();
+  } catch (e) {
+    showToast('删除失败: ' + e.message, 'error');
+  }
+}
+
+// ----- Publish -----
+async function publish() {
+  try {
+    const res = await fetch('/api/publish', { method: 'POST' });
+    const data = await res.json();
+    if (data.status === 'ok') {
+      document.getElementById('stat-published').textContent = data.count;
+      showToast(`📦 已发布 ${data.count} 条动态到 data.js`);
+    } else {
+      showToast('发布失败', 'error');
+    }
+  } catch (e) {
+    showToast('发布失败: ' + e.message, 'error');
+  }
+}
+
+// ----- Helpers -----
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// ----- Init -----
+refreshList();
+</script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+{
+  "regionId": "singapore",
+  "pages": [
+    {
+      "id": "company-types",
+      "title": "公司类型与选择",
+      "icon": "🏢",
+      "sections": [
+        {
+          "title": "可选商业实体类型",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["类型", "特点", "适用场景", "税务处理", "最低要求"],
+              "rows": [
+                ["私人有限公司 (Pte Ltd)", "独立法人；股东责任有限；最受外商欢迎；税率优惠", "绝大多数外资和本地商业活动", "企业所得税17%；新公司首20万新元应税收入享免税优惠（SUTE）；无资本利得税；股息免税", "至少1名股东；至少1名本地董事；最低1新元注册资本"],
+                ["分公司 (Branch Office)", "非独立法人；母公司承担全部责任；须任命本地代理人", "外国公司在新加坡开展业务", "企业所得税17%；利润汇回母公司可能需缴预扣税", "须有外国母公司；须任命至少2名本地代理人"],
+                ["代表处 (Representative Office)", "不可开展营利活动；仅限市场调研、联络", "外国公司的市场探索阶段", "不产生新加坡应税收入，无需纳税", "须经新加坡企业发展局（EDB）批准"],
+                ["独资企业 (Sole Proprietorship)", "无限责任；外国人须有本地经理（EP持有者）", "小规模个人经营", "按个人所得税率课税（最高24%），非企业税率", "仅限个人"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "ACRA - 商业结构类型",
+              "url": "https://www.acra.gov.sg/register/business/",
+              "type": "official"
+            }
+          ]
+        },
+        {
+          "title": "推荐：私人有限公司 (Private Limited Company)",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "独立法人地位，股东责任以注册资本为限",
+                "公司税率17%，新成立公司首20万新元应税收入享有税务减免",
+                "无最低注册资本要求（通常设定1-1,000新元）",
+                "须至少1名本地董事（新加坡公民/PR/EntrePass持有者）",
+                "须委任公司秘书（公司成立后6个月内）",
+                "须有新加坡本地注册地址"
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "ACRA - 私人有限公司要求",
+              "url": "https://www.acra.gov.sg/register/business/",
+              "type": "official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "registration-requirements",
+      "title": "注册要求与条件",
+      "icon": "📋",
+      "sections": [
+        {
+          "title": "外资设立私人有限公司核心要求",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["要求项", "具体要求"],
+              "rows": [
+                ["股东", "至少1名股东；可为个人或公司；无国籍限制；可100%外资持股"],
+                ["董事", "至少1名董事须为新加坡居民（公民/PR/EntrePass/就业准证持有者）；须至少1名董事为自然人"],
+                ["公司秘书", "公司成立后6个月内委任；须为新加坡居民"],
+                ["注册地址", "须提供新加坡本地商业地址（不可用邮政信箱）；可使用服务商地址"],
+                ["注册资本", "最低1新元；无上限；无须实缴验资"],
+                ["公司名称", "需ACRA预先批准；须以「Pte Ltd」结尾"],
+                ["经营范围", "须选择SSIC行业代码；部分行业需额外牌照"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "ACRA - 公司注册要求",
+              "url": "https://www.acra.gov.sg/register/business/",
+              "type": "official"
+            },
+            {
+              "name": "GoBusiness 创业指南",
+              "url": "https://www.gobusiness.gov.sg/resources/start-up-guide/",
+              "type": "official"
+            }
+          ]
+        },
+        {
+          "title": "内地居民特别注意事项",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "内地居民可100%持股，但必须有一名新加坡本地董事（可由注册服务商提供「挂名董事」服务）",
+                "挂名董事（Nominee Director）不参与实际经营，通常须签署有限授权安排",
+                "注册资本建议至少1,000-10,000新元以增加可信度——尤其是银行开户时",
+                "实际经营董事须持有工作准证（Employment Pass / EntrePass）才能在新加坡工作",
+                "注册地址+本地董事+公司秘书均可由公司秘书服务商一站式提供",
+                "ODI备案：如涉及境内资金出境投资，须向中国商务部/发改委办理ODI备案"
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "新加坡人力部 (MOM) - 工作准证",
+              "url": "https://www.mom.gov.sg/passes-and-permits/employment-pass",
+              "type": "official"
+            },
+            {
+              "name": "ACRA - 董事要求指南",
+              "url": "https://www.acra.gov.sg/register/business/",
+              "type": "official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "registration-process",
+      "title": "注册流程与步骤",
+      "icon": "📝",
+      "sections": [
+        {
+          "title": "注册步骤总览",
+          "content": [
+            {
+              "type": "steps",
+              "steps": [
+                {
+                  "step": 1,
+                  "title": "公司名称申请",
+                  "desc": "通过ACRA的BizFile+系统（bizfile.gov.sg）提交公司名称申请。名称须经ACRA预先批准，通常1小时内出结果。",
+                  "duration": "1小时-1个工作日",
+                  "fee": "15新元"
+                },
+                {
+                  "step": 2,
+                  "title": "准备注册信息",
+                  "desc": "准备以下信息：(1) 公司名称及SSIC业务代码；(2) 注册地址；(3) 股东详情（姓名、住址、持股比例）；(4) 董事详情；(5) 公司秘书详情；(6) 注册资本金额。",
+                  "duration": "1-2个工作日",
+                  "fee": "免费（自行准备）"
+                },
+                {
+                  "step": 3,
+                  "title": "提交公司注册申请",
+                  "desc": "通过BizFile+系统提交注册申请，填写公司章程细则（ Constitution）及公司详情。可使用Corppass账户或通过注册服务商代为提交。",
+                  "duration": "即时至1个工作日",
+                  "fee": "315新元（标准注册费）"
+                },
+                {
+                  "step": 4,
+                  "title": "领取注册证书",
+                  "desc": "注册成功后在线获取：(1) 公司注册证书（Certificate of Incorporation）；(2) 商业登记证（Business Profile）；(3) 公司章程（Constitution）；(4) 唯一实体编号（UEN）。",
+                  "duration": "即时",
+                  "fee": "免费（含在注册费内）"
+                },
+                {
+                  "step": 5,
+                  "title": "后续事项",
+                  "desc": "完成注册后需要：(1) 在60天内委任公司秘书；(2) 申请Corppass数字身份；(3) 向IRAS注册税务；(4) 开设银行账户；(5) 如注册GST（年营业额超100万新元强制注册）。",
+                  "duration": "1-4周",
+                  "fee": "视服务而定"
+                }
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "ACRA BizFile+",
+              "url": "https://www.bizfile.gov.sg/",
+              "type": "official"
+            },
+            {
+              "name": "GoBusiness - 创业指南",
+              "url": "https://www.gobusiness.gov.sg/resources/start-up-guide/",
+              "type": "official"
+            }
+          ]
+        },
+        {
+          "title": "注册费用汇总",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["费用项目", "金额（新元）"],
+              "rows": [
+                ["公司名称申请", "15"],
+                ["公司注册（标准注册费）", "315"],
+                ["公司秘书服务（年费）", "300-1,000/年"],
+                ["注册地址服务（年费）", "300-800/年"],
+                ["挂名董事服务（年费）", "1,500-4,000/年"],
+                ["Corppass注册", "免费"],
+                ["GST注册", "免费"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "ACRA - 费用表",
+              "url": "https://www.acra.gov.sg/register/business/",
+              "type": "official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "post-registration",
+      "title": "注册后合规义务",
+      "icon": "✅",
+      "sections": [
+        {
+          "title": "年度合规要求",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["义务", "频率", "说明", "逾期罚款"],
+              "rows": [
+                ["年度股东大会 (AGM)", "每年", "私营公司可书面决议免开；须在成立后18个月内召开首次AGM", "-"],
+                ["年度申报 (Annual Return)", "每年", "通过BizFile+提交财务信息及公司资料", "300新元"],
+                ["税务申报 (Corporate Tax)", "每年", "向IRAS提交预估税（ECI）及Form C税表", "200-1,000新元"],
+                ["审计要求", "每年", "年营业额<500万新元且资产<500万且员工<50的可免审计", "-"],
+                ["更新董事/秘书信息", "变更后14天内", "任何董事或秘书变更须在14天内通知ACRA", "-"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "ACRA - 合规要求",
+              "url": "https://www.acra.gov.sg/register/business/",
+              "type": "official"
+            },
+            {
+              "name": "IRAS - 企业税务",
+              "url": "https://www.iras.gov.sg/taxes/corporate-income-tax",
+              "type": "official"
+            }
+          ]
+        },
+        {
+          "title": "新公司税务优惠",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["优惠项目", "详情"],
+              "rows": [
+                ["初创企业免税计划 (SUTE)", "首20万新元应税收入：首10万全免（75%减免），后10万免50%"],
+                ["部分免税计划", "如不符合SUTE条件，首1万免75%，后19万免50%"],
+                ["GST注册门槛", "年营业额超100万新元须注册GST（9%）"],
+                ["离岸收入免税", "符合条件的离岸股息、分支机构利润等可免税"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "IRAS - 初创企业免税",
+              "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/start-ups",
+              "type": "official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bank-account",
+      "title": "企业银行开户",
+      "icon": "🏦",
+      "sections": [
+        {
+          "title": "开户基本要求",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "公司注册全套文件（注册证书、商业简介BizFile、公司章程）",
+                "董事和股东的有效护照及身份证件",
+                "董事和股东的住址证明（最近3个月内）",
+                "公司业务计划书及预期交易量",
+                "资金来源说明及预计月交易额",
+                "关联公司资料（如有）",
+                "董事个人简历及从业背景",
+                "部分银行要求存入最低开户资金（5,000-50,000新元）"
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "MAS - 银行开户指引",
+              "url": "https://www.mas.gov.sg/regulation/banking",
+              "type": "official"
+            },
+            {
+              "name": "GoBusiness - 公司银行开户",
+              "url": "https://www.gobusiness.gov.sg/resources/start-up-guide/open-a-corporate-bank-account",
+              "type": "official"
+            }
+          ]
+        },
+        {
+          "title": "主流银行对比",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["银行", "最低存款", "开户周期", "开户难度", "特点"],
+              "rows": [
+                ["DBS 星展银行", "1,000-5,000新元", "2-4周", "中", "东南亚最大银行，数字银行体验好"],
+                ["OCBC 华侨银行", "1,000-5,000新元", "2-4周", "中", "中文服务好，中小企业产品齐全"],
+                ["UOB 大华银行", "1,000-5,000新元", "2-4周", "中", "区域网络广，贸易融资强"],
+                ["CIMB", "1,000新元", "1-2周", "较低", "东盟区域，门槛较低"],
+                ["渣打银行 (SC)", "5,000-20,000新元", "2-4周", "中", "跨境银行服务好"],
+                ["汇丰银行 (HSBC)", "5,000-20,000新元", "2-4周", "中", "全球多币种账户便利"],
+                ["Aspire (数字银行)", "0", "1周", "较低", "全程在线，适合初创企业"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "MAS - 银行机构名单",
+              "url": "https://www.mas.gov.sg/regulation/banking/list-of-banks",
+              "type": "official"
+            }
+          ]
+        },
+        {
+          "title": "开户注意事项",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "非居民董事须亲临新加坡面签（部分银行可视频）",
+                "MAS 遵行严格的KYC和AML/CFT合规要求（MAS Notice 626）",
+                "公司业务须有实质运营计划——纯空壳公司很难开户",
+                "建议开立新元+多币种账户以方便跨境交易",
+                "准备好内地母公司的营业执照和业务合同可提高成功率",
+                "如被拒可尝试数字银行（Aspire、Revolut等）或中小型银行",
+                "部分银行要求董事持有工作准证（EP）或在本地有签证"
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "MAS Notice 626",
+              "url": "https://www.mas.gov.sg/regulation/notices/notice-626",
+              "type": "official"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

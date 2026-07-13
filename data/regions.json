@@ -1,0 +1,95 @@
+{
+  "regions": [
+    {
+      "id": "hong-kong",
+      "name": "香港",
+      "nameEn": "Hong Kong",
+      "flag": "🇭🇰",
+      "color": "#c0392b",
+      "lastUpdated": "2026-06-04",
+      "summary": "国际金融中心，公司注册简便、税率低、无外汇管制",
+      "businessSuggestion": "跨境电商、贸易中转、IPO上市、控股平台的首选地。适合：外贸公司、品牌出海运营、知识产权持有。",
+      "advantages": ["利得税仅16.5%且离岸利润可豁免", "无资本利得税/增值税/股息预扣税", "注册流程快（1小时电子注册）", "无外汇管制", "与内地文化语言无障碍"],
+      "bankDifficulty": {"level": "较低", "icon": "🟢", "detail": "汇丰/渣打/中银等主流银行对外资企业友好，秘书公司可协助预约"},
+      "officialSources": [
+        {"name": "香港公司注册处 (CR)", "url": "https://www.cr.gov.hk/sc/home/", "description": "公司注册执行"},
+        {"name": "香港税务局 (IRD)", "url": "https://www.ird.gov.hk/chs/tax/bre.htm", "description": "商业登记证管理"},
+        {"name": "香港金融管理局 (HKMA)", "url": "https://www.hkma.gov.hk/", "description": "银行监管"},
+        {"name": "电子版香港法例", "url": "https://www.elegislation.gov.hk/hk/cap622", "description": "公司条例第622章"}
+      ]
+    },
+    {
+      "id": "singapore",
+      "name": "新加坡",
+      "nameEn": "Singapore",
+      "flag": "🇸🇬",
+      "color": "#e74c3c",
+      "lastUpdated": "2026-06-04",
+      "summary": "全球最佳营商环境，税率优惠、政治稳定、法律体系完善",
+      "businessSuggestion": "东南亚区域总部、科技/金融科技公司、资产管理。适合：有东南亚扩张计划的企业、需国际信誉背书的品牌。",
+      "advantages": ["企业所得税17%，首20万享免税", "无资本利得税/股息税", "政治经济高度稳定", "全球领先的金融和贸易中心", "与中国签有避免双重征税协定"],
+      "bankDifficulty": {"level": "中等", "icon": "🟡", "detail": "KYC/AML审查严格，须提供完整业务证明；数字银行（Aspire）降低门槛"},
+      "officialSources": [
+        {"name": "ACRA", "url": "https://www.acra.gov.sg/", "description": "公司注册监管"},
+        {"name": "IRAS", "url": "https://www.iras.gov.sg/", "description": "税务申报"},
+        {"name": "MAS", "url": "https://www.mas.gov.sg/", "description": "金融监管"},
+        {"name": "GoBusiness", "url": "https://www.gobusiness.gov.sg/", "description": "创业一站式服务"},
+        {"name": "EnterpriseSG", "url": "https://www.enterprisesg.gov.sg/", "description": "企业国际化支持"}
+      ]
+    },
+    {
+      "id": "us",
+      "name": "美国",
+      "nameEn": "United States",
+      "flag": "🇺🇸",
+      "color": "#2563eb",
+      "lastUpdated": "2026-06-04",
+      "summary": "全球最大消费市场，各州独立管理公司注册，联邦层面税务合规",
+      "businessSuggestion": "跨境电商（亚马逊/独立站）、SaaS/科技公司、品牌全球化。适合：面向北美市场、计划吸引风投的科技企业。",
+      "advantages": ["全球最大消费市场", "LLC穿透课税避免双重征税", "特拉华州公司法体系最完善", "数字银行（Mercury/Relay）可远程开户", "美元核心货币，跨境金融便利"],
+      "bankDifficulty": {"level": "较低", "icon": "🟢", "detail": "Mercury/Relay/Wise 等数字银行全程在线，EIN+护照即可；传统大行需到场"},
+      "officialSources": [
+        {"name": "IRS", "url": "https://www.irs.gov/businesses", "description": "企业税务登记"},
+        {"name": "SBA", "url": "https://www.sba.gov/business-guide", "description": "创业指南"},
+        {"name": "FinCEN BOI", "url": "https://www.fincen.gov/boi", "description": "受益所有人申报"},
+        {"name": "特拉华州公司处", "url": "https://www.corp.delaware.gov/", "description": "公司注册"},
+        {"name": "怀俄明州州务卿", "url": "https://wyobiz.wy.gov/", "description": "低成本注册"}
+      ]
+    },
+    {
+      "id": "uk",
+      "name": "英国",
+      "nameEn": "United Kingdom",
+      "flag": "🇬🇧",
+      "color": "#1d4ed8",
+      "lastUpdated": "2026-06-04",
+      "summary": "欧洲门户，公司注册费低、流程快、伦敦金融中心优势明显",
+      "businessSuggestion": "欧洲市场入口、跨境电商（亚马逊英国站/欧洲站）、金融科技。适合：以英国作为欧洲总部再辐射欧盟市场的企业。",
+      "advantages": ["公司注册费仅£50，流程全在线", "企业所得税25%（中小企业19%）", "VAT起征点£85,000（低税负）", "伦敦全球金融中心", "法律体系成熟，投资者保护好"],
+      "bankDifficulty": {"level": "较低", "icon": "🟢", "detail": "Wise/Revolut/Starling 等数字银行全程在线开户，对非居民董事友好"},
+      "officialSources": [
+        {"name": "Companies House", "url": "https://www.gov.uk/government/organisations/companies-house", "description": "英国公司注册处"},
+        {"name": "HMRC", "url": "https://www.gov.uk/government/organisations/hm-revenue-customs", "description": "英国税务海关总署"},
+        {"name": "UK Gov - Set up a business", "url": "https://www.gov.uk/set-up-business", "description": "创业指南"}
+      ]
+    },
+    {
+      "id": "dubai",
+      "name": "迪拜",
+      "nameEn": "Dubai / UAE",
+      "flag": "🇦🇪",
+      "color": "#d97706",
+      "lastUpdated": "2026-06-04",
+      "summary": "中东商业枢纽，自贸区0%企业所得税、无个人所得税、无外汇管制",
+      "businessSuggestion": "中东/北非/南亚市场枢纽、国际贸易中转、资产持有。适合：面向中东/非洲市场、国际贸易、高净值个人资产配置。",
+      "advantages": ["自贸区公司0%企业所得税", "0%个人所得税", "无外汇管制，资金自由进出", "迪拜自贸区（DMCC/JAFZA）基础设施完善", "地理位置优越，辐射中东非洲南亚"],
+      "bankDifficulty": {"level": "较高", "icon": "🔴", "detail": "审核严格，最低存款高（AED 50K-300K），需面签；数字银行（Wio/Zand）门槛较低"},
+      "officialSources": [
+        {"name": "DMCC Free Zone", "url": "https://www.dmcc.ae/", "description": "迪拜多种商品中心"},
+        {"name": "JAFZA", "url": "https://www.jafza.ae/", "description": "杰贝阿里自贸区"},
+        {"name": "DIFC", "url": "https://www.difc.ae/", "description": "迪拜国际金融中心"},
+        {"name": "UAE Government", "url": "https://u.ae/", "description": "阿联酋政府门户"}
+      ]
+    }
+  ]
+}

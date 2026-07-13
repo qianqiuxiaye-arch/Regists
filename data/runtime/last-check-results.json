@@ -1,0 +1,220 @@
+{
+  "check_time": "2026-06-25T02:19:43.004807+00:00",
+  "total_sources": 21,
+  "changed": 9,
+  "unchanged": 0,
+  "failed": 12,
+  "first_check": 0,
+  "details": [
+    {
+      "name": "香港公司注册处",
+      "url": "https://www.cr.gov.hk/sc/home/",
+      "status_code": 200,
+      "error": null,
+      "changed": true,
+      "new_hash": "7a51d076e93bf090",
+      "checked_at": "2026-06-25T02:20:04.413621+00:00",
+      "region_id": "hong-kong"
+    },
+    {
+      "name": "公司注册流程",
+      "url": "https://www.cr.gov.hk/sc/services/register-company.htm",
+      "status_code": 0,
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>",
+      "changed": null,
+      "new_hash": null,
+      "checked_at": "2026-06-25T02:20:09.283195+00:00",
+      "region_id": "hong-kong"
+    },
+    {
+      "name": "税务局商业登记",
+      "url": "https://www.ird.gov.hk/chs/tax/bre.htm",
+      "status_code": 0,
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>",
+      "changed": null,
+      "new_hash": null,
+      "checked_at": "2026-06-25T02:20:27.446426+00:00",
+      "region_id": "hong-kong"
+    },
+    {
+      "name": "公司条例（第622章）",
+      "url": "https://www.elegislation.gov.hk/hk/cap622",
+      "status_code": 0,
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>",
+      "changed": null,
+      "new_hash": null,
+      "checked_at": "2026-06-25T02:20:47.588937+00:00",
+      "region_id": "hong-kong"
+    },
+    {
+      "name": "ACRA 公司注册",
+      "url": "https://www.acra.gov.sg/register/business/",
+      "status_code": 0,
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>",
+      "changed": null,
+      "new_hash": null,
+      "checked_at": "2026-06-25T02:21:02.740499+00:00",
+      "region_id": "singapore"
+    },
+    {
+      "name": "ACRA 注册服务",
+      "url": "https://www.acra.gov.sg/register/",
+      "status_code": 200,
+      "error": null,
+      "changed": true,
+      "new_hash": "a3a9790aba2a4c17",
+      "checked_at": "2026-06-25T02:21:16.485668+00:00",
+      "region_id": "singapore"
+    },
+    {
+      "name": "GoBusiness 创业指南",
+      "url": "https://www.gobusiness.gov.sg/resources/start-up-guide/",
+      "status_code": 200,
+      "error": null,
+      "changed": true,
+      "new_hash": "f03ce153d73ce8c1",
+      "checked_at": "2026-06-25T02:21:49.105646+00:00",
+      "region_id": "singapore"
+    },
+    {
+      "name": "IRAS 企业税务",
+      "url": "https://www.iras.gov.sg/taxes/corporate-income-tax",
+      "status_code": 200,
+      "error": null,
+      "changed": true,
+      "new_hash": "937c2b5f43d56359",
+      "checked_at": "2026-06-25T02:22:00.086547+00:00",
+      "region_id": "singapore"
+    },
+    {
+      "name": "MAS Notice 626",
+      "url": "https://www.mas.gov.sg/regulation/notices/notice-626",
+      "status_code": 200,
+      "error": null,
+      "changed": true,
+      "new_hash": "f223474d6cc03808",
+      "checked_at": "2026-06-25T02:22:06.313991+00:00",
+      "region_id": "singapore"
+    },
+    {
+      "name": "IRS 企业结构",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/business-structures",
+      "status_code": 0,
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>",
+      "changed": null,
+      "new_hash": null,
+      "checked_at": "2026-06-25T02:22:09.914685+00:00",
+      "region_id": "us"
+    },
+    {
+      "name": "SBA 选择公司结构",
+      "url": "https://www.sba.gov/business-guide/launch-your-business/choose-business-structure",
+      "status_code": 0,
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>",
+      "changed": null,
+      "new_hash": null,
+      "checked_at": "2026-06-25T02:22:19.936603+00:00",
+      "region_id": "us"
+    },
+    {
+      "name": "IRS EIN 申请",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online",
+      "status_code": 200,
+      "error": null,
+      "changed": true,
+      "new_hash": "d494c7582540aa43",
+      "checked_at": "2026-06-25T02:23:07.528457+00:00",
+      "region_id": "us"
+    },
+    {
+      "name": "FinCEN BOI申报",
+      "url": "https://www.fincen.gov/boi",
+      "status_code": 0,
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>",
+      "changed": null,
+      "new_hash": null,
+      "checked_at": "2026-06-25T02:23:12.261330+00:00",
+      "region_id": "us"
+    },
+    {
+      "name": "特拉华州公司处",
+      "url": "https://www.corp.delaware.gov/",
+      "status_code": 0,
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>",
+      "changed": null,
+      "new_hash": null,
+      "checked_at": "2026-06-25T02:23:17.273866+00:00",
+      "region_id": "us"
+    },
+    {
+      "name": "怀俄明州公司注册",
+      "url": "https://wyobiz.wy.gov/",
+      "status_code": 0,
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>",
+      "changed": null,
+      "new_hash": null,
+      "checked_at": "2026-06-25T02:23:22.871057+00:00",
+      "region_id": "us"
+    },
+    {
+      "name": "Companies House",
+      "url": "https://www.gov.uk/government/organisations/companies-house",
+      "status_code": 0,
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>",
+      "changed": null,
+      "new_hash": null,
+      "checked_at": "2026-06-25T02:23:32.886478+00:00",
+      "region_id": "uk"
+    },
+    {
+      "name": "HMRC",
+      "url": "https://www.gov.uk/government/organisations/hm-revenue-customs",
+      "status_code": 200,
+      "error": null,
+      "changed": true,
+      "new_hash": "bf9ed665dabf6030",
+      "checked_at": "2026-06-25T02:23:51.609497+00:00",
+      "region_id": "uk"
+    },
+    {
+      "name": "UK Gov 创业指南",
+      "url": "https://www.gov.uk/set-up-business",
+      "status_code": 0,
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>",
+      "changed": null,
+      "new_hash": null,
+      "checked_at": "2026-06-25T02:23:54.737993+00:00",
+      "region_id": "uk"
+    },
+    {
+      "name": "DMCC",
+      "url": "https://www.dmcc.ae/",
+      "status_code": 200,
+      "error": null,
+      "changed": true,
+      "new_hash": "818d7c73dc6ab9e1",
+      "checked_at": "2026-06-25T02:24:02.643857+00:00",
+      "region_id": "dubai"
+    },
+    {
+      "name": "JAFZA",
+      "url": "https://www.jafza.ae/",
+      "status_code": 200,
+      "error": null,
+      "changed": true,
+      "new_hash": "c645e6c3d74c1efc",
+      "checked_at": "2026-06-25T02:24:16.021628+00:00",
+      "region_id": "dubai"
+    },
+    {
+      "name": "UAE Government",
+      "url": "https://u.ae/",
+      "status_code": 0,
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>",
+      "changed": null,
+      "new_hash": null,
+      "checked_at": "2026-06-25T02:24:19.438940+00:00",
+      "region_id": "dubai"
+    }
+  ]
+}

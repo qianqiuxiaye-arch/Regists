@@ -1,0 +1,331 @@
+{
+  "regionId": "us",
+  "pages": [
+    {
+      "id": "company-types",
+      "title": "公司类型与选择",
+      "icon": "🏢",
+      "sections": [
+        {
+          "title": "主要公司类型",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["类型", "特点", "适用场景", "税务处理"],
+              "rows": [
+                ["LLC（有限责任公司）", "营运灵活；成员责任有限；可通过选择税务身份避免双重征税；无股东人数限制", "外资最常用类型，尤其是中小企业、跨境电商", "默认穿透课税（Pass-through）；也可选择S-Corp或C-Corp税务身份"],
+                ["C-Corp（股份有限公司）", "独立纳税实体；可上市；无限股东；可发行多类股份", "拟融资/上市/吸引风投的企业", "公司层面纳税+股东分红纳税（双重征税）"],
+                ["S-Corp（小型股份有限公司）", "穿透课税；仅限美国公民/绿卡持有者", "美国本地小型企业（外国人不可用）", "穿透课税；须IRS指定代码"],
+                ["独资企业 (Sole Proprietorship)", "无限责任；无需注册（可用SSN直接运营）", "个人小规模经营（外国人不可）", "穿透课税；个人报税"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "IRS - 企业结构",
+              "url": "https://www.irs.gov/businesses/small-businesses-self-employed/business-structures",
+              "type": "official"
+            },
+            {
+              "name": "SBA - 选择公司结构",
+              "url": "https://www.sba.gov/business-guide/launch-your-business/choose-business-structure",
+              "type": "official"
+            }
+          ]
+        },
+        {
+          "title": "对外国人最推荐：LLC（有限责任公司）",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "外国人（非美国居民）可100%持有LLC",
+                "无需美国社会安全号（SSN）——用ITIN或个人税号即可",
+                "默认穿透课税——公司层面不纳税，利润直接计入个人报税",
+                "无最低资本要求",
+                "无股东会/董事会等复杂治理要求",
+                "注意：外国人持有LLC的穿透税负须通过ITIN申报"
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "IRS - 外国人税务指南",
+              "url": "https://www.irs.gov/individuals/international-taxpayers",
+              "type": "official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "registration-requirements",
+      "title": "注册要求与条件",
+      "icon": "📋",
+      "sections": [
+        {
+          "title": "外资设立LLC核心要求",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["要求项", "具体要求"],
+              "rows": [
+                ["股东（成员）", "至少1人；可为个人或公司；无国籍限制；可100%外资持股"],
+                ["管理人员", "无须董事；可由成员直接管理（Member-managed）或任命经理（Manager-managed）"],
+                ["注册地址", "须提供该州内实际地址（可用注册代理人地址）；可以是邮政信箱"],
+                ["注册代理人 (Registered Agent)", "须在注册州有注册代理人；可为服务机构"],
+                ["注册资本", "无最低要求"],
+                ["公司名称", "各州要求不同；通常须以「LLC」「Limited Liability Company」结尾；不可与已注册公司重名"],
+                ["运营协议 (Operating Agreement)", "非强制但强烈建议——规定股权分配、管理结构、利润分配等"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "SBA - LLC注册要求",
+              "url": "https://www.sba.gov/business-guide/launch-your-business/choose-business-structure",
+              "type": "official"
+            }
+          ]
+        },
+        {
+          "title": "热门注册州对比",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["州", "年费/特许税", "隐私保护", "对外资友好度", "推荐场景"],
+              "rows": [
+                ["特拉华州 (Delaware)", "最低$300/年", "高（股东信息不公开）", "★★★★★", "拟融资/上市/风投；有专业公司法体系"],
+                ["怀俄明州 (Wyoming)", "最低$60/年", "高（股东信息不公开）", "★★★★★", "资产持有；注重隐私和低成本"],
+                ["新墨西哥州", "$0（无年费）", "中等", "★★★★", "纯粹最低成本持有"],
+                ["内华达州 (Nevada)", "$500/年", "高", "★★★★", "注重隐私；无州所得税"],
+                ["德克萨斯州 (Texas)", "$0（但须特许经营税）", "中等", "★★★★", "活跃经营；市场接近南部和墨西哥"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "特拉华州公司处",
+              "url": "https://www.corp.delaware.gov/",
+              "type": "official"
+            },
+            {
+              "name": "怀俄明州州务卿",
+              "url": "https://wyobiz.wy.gov/",
+              "type": "official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "registration-process",
+      "title": "注册流程与步骤",
+      "icon": "📝",
+      "sections": [
+        {
+          "title": "注册步骤总览（以LLC为例）",
+          "content": [
+            {
+              "type": "steps",
+              "steps": [
+                {
+                  "step": 1,
+                  "title": "选择注册州",
+                  "desc": "根据业务需求选择注册州。常见选择：(1) 特拉华州 - 最完善的公司法体系；(2) 怀俄明州 - 成本低且隐私保护好；(3) 实际经营州 - 如业务在特定州经营，建议在该州注册。",
+                  "duration": "1-3天",
+                  "fee": "免费（自行研究）"
+                },
+                {
+                  "step": 2,
+                  "title": "选择注册代理人",
+                  "desc": "每个州要求公司有一个注册代理人（Registered Agent），负责接收法律文书。可使用专业注册代理人服务商（如Northwest Registered Agent, LegalZoom等）。",
+                  "duration": "即时",
+                  "fee": "$50-300/年"
+                },
+                {
+                  "step": 3,
+                  "title": "提交组织章程 (Articles of Organization)",
+                  "desc": "在该州州务卿网站提交组织章程（各州名称可能不同），包含公司名称、地址、注册代理人信息、成员信息等。",
+                  "duration": "即时-5个工作日",
+                  "fee": "特拉华$90；怀俄明$100；新墨西哥$50；各州不同"
+                },
+                {
+                  "step": 4,
+                  "title": "申请EIN (雇主识别号)",
+                  "desc": "向IRS申请EIN（Employer Identification Number），用于税务申报、银行开户、雇员管理等。外国人可通过IRS在线申请（须有ITIN或SSN）或邮寄SS-4表格。",
+                  "duration": "在线即时",
+                  "fee": "免费"
+                },
+                {
+                  "step": 5,
+                  "title": "申请ITIN（如适用）",
+                  "desc": "如没有SSN，须向IRS申请个人纳税人识别号（ITIN）用于税务申报。须提交W-7表格并附护照原件或经认证副本。",
+                  "duration": "7-11周",
+                  "fee": "免费"
+                },
+                {
+                  "step": 6,
+                  "title": "BOI受益人信息申报",
+                  "desc": "根据《企业透明度法案》(CTA)，2024年起所有新注册公司须在90天内向FinCEN申报受益所有人信息（BOI），包括姓名、出生日期、地址、身份证件等。注意：该法案目前已受到法律挑战，请关注最新进展。",
+                  "duration": "1-2小时（在线填写）",
+                  "fee": "免费"
+                },
+                {
+                  "step": 7,
+                  "title": "后续事项",
+                  "desc": "完成注册后需要：(1) 签署运营协议；(2) 开设商业银行账户；(3) 各州年费/特许税缴纳安排；(4) 如有经营，申请地方营业执照；(5) 开通银行账户。",
+                  "duration": "1-4周",
+                  "fee": "视服务而定"
+                }
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "IRS - EIN申请",
+              "url": "https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online",
+              "type": "official"
+            },
+            {
+              "name": "FinCEN - BOI申报",
+              "url": "https://www.fincen.gov/boi",
+              "type": "official"
+            },
+            {
+              "name": "SBA - 创业步骤",
+              "url": "https://www.sba.gov/business-guide/10-steps-start-your-business",
+              "type": "official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "post-registration",
+      "title": "注册后合规义务",
+      "icon": "✅",
+      "sections": [
+        {
+          "title": "年度合规要求",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["义务", "频率", "说明"],
+              "rows": [
+                ["州年费/特许税 (Franchise Tax)", "每年", "各州不同：特拉华最低$300；怀俄明$60；部分州免年费"],
+                ["年度报告 (Annual Report)", "每年", "向州务卿提交最新信息；费用$50-200不等"],
+                ["联邦税申报 (Form 1065/1120)", "每年", "穿透实体提交信息申报表；C-Corp申报Form 1120"],
+                ["BOI信息更新", "信息变更后30天内", "受益所有人信息变更须在30天内向FinCEN更新"],
+                ["州所得税申报", "每年", "如在该州有经营或收入来源，须申报州税"],
+                ["FBAR（海外银行账户报告）", "每年", "如境外金融账户总值超$10,000须申报FinCEN Form 114"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "IRS - 企业税表",
+              "url": "https://www.irs.gov/businesses/small-businesses-self-employed/business-taxes",
+              "type": "official"
+            },
+            {
+              "name": "FinCEN - BOI合规",
+              "url": "https://www.fincen.gov/boi",
+              "type": "official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bank-account",
+      "title": "企业银行开户",
+      "icon": "🏦",
+      "sections": [
+        {
+          "title": "开户基本要求",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "公司注册文件（Articles of Organization + Certificate of Good Standing）",
+                "EIN确认函（IRS发的SS-4确认信或CP 575表）",
+                "运营协议（Operating Agreement）",
+                "董事/成员的有效护照",
+                "董事/成员的ITIN（如适用）——部分银行接受护照替代",
+                "公司地址证明（可用注册代理人地址+邮件转发服务）",
+                "个人银行资信证明/推荐信（如果是从海外开户）",
+                "业务计划及预期交易说明"
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "SBA - 商业银行开户",
+              "url": "https://www.sba.gov/business-guide/manage-your-business/open-business-bank-account",
+              "type": "official"
+            }
+          ]
+        },
+        {
+          "title": "银行对比（外国人可开）",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["银行", "最低存款", "开户方式", "特点"],
+              "rows": [
+                ["Mercury", "$0", "全程在线", "专为初创企业设计；支持远程开户；接受外国人LLC"],
+                ["Relay", "$0", "全程在线", "零费用；集成QuickBooks；多用户权限管理"],
+                ["Brex", "$0", "全程在线", "面向科技/初创企业；暂不接受个人LLC"],
+                ["Wise Business", "$0", "全程在线", "多币种账户；跨境汇款便利；非传统银行"],
+                ["Bank of America", "$100-$500", "须亲临美国网点", "传统大行；网点最多；需SSN或ITIN"],
+                ["Chase", "$0-$500", "须亲临美国网点", "传统大行；服务全面；需SSN/ITIN或护照+EIN"],
+                ["First Business Bank", "$0", "可远程", "对非居民友好；接受远程开户"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "FDIC - 受保银行查询",
+              "url": "https://www.fdic.gov/bank-find/",
+              "type": "official"
+            }
+          ]
+        },
+        {
+          "title": "开户注意事项",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "传统大行（Chase/BOA）对非居民开户审查较严，建议先尝试数字银行（Mercury/Relay）",
+                "开设银行账户前建议先获得EIN（在线申请即时完成）",
+                "部分数字银行要求公司有实际运营或融资记录",
+                "如选择Mercury，注意其不支持所有类型的LLC（尤其是单成员LLC的政策可能调整）",
+                "银行开户通常不需要SSN——EIN+护照即可",
+                "开户后注意保持最低余额要求，避免月费",
+                "建议开立多个银行账户以分散风险"
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-01",
+          "sources": [
+            {
+              "name": "SBA - 商业银行开户指南",
+              "url": "https://www.sba.gov/business-guide/manage-your-business/open-business-bank-account",
+              "type": "official"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

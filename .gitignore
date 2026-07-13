@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp audit files
+geo_audit_signals.json
+geo_assessment.json
+geo_score_results.json
+geo_score_report.md
+
+# Build output (if any)
+dist/
+build/
+
+# WorkBuddy
+.workbuddy/

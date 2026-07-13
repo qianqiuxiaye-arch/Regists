@@ -1,0 +1,16 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://regists.com/sitemap.xml
+
+# Allow AI crawlers
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: ClaudeBot
+Allow: /
+
+User-Agent: Google-Extended
+Allow: /
+
+# Disallow: /data/

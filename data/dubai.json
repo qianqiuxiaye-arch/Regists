@@ -1,0 +1,250 @@
+{
+  "regionId": "dubai",
+  "pages": [
+    {
+      "id": "company-types",
+      "title": "公司类型与选择",
+      "icon": "🏢",
+      "sections": [
+        {
+          "title": "公司设立模式对比",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["模式", "特点", "适用场景", "税务处理", "最低要求"],
+              "rows": [
+                ["自贸区公司 (Free Zone)", "100%外资持股；无本地保人要求；在自贸区内经营自由；利润可自由汇出", "跨境电商、贸易、咨询、IT/科技、物流", "自贸区内0%企业所得税；0%个人所得税；与迪拜有双边税收协定的国家可享优惠", "至少1名股东；至少1名董事；须有自贸区办公室/工位"],
+                [" mainland (保人公司)", "须有51%本地保人（可签署管理协议实质控制）；可在阿联酋全境经营", "需在阿联酋本地市场经营的企业（餐饮/零售/工程）", "企业所得税9%（收入超AED 375,000）；0%个人所得税", "至少1名股东（含阿联酋本地保人）；至少1名董事"],
+                ["离岸公司 (Offshore)", "不可在阿联酋境内经营；资产持有为主；隐私保护强", "资产持有、控股平台、知识产权持有", "0%企业所得税；0%个人所得税", "至少1名股东；须有注册代理人"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "UAE Government - 商业类型", "url": "https://u.ae/en/information-and-services/business", "type": "official"},
+            {"name": "DMCC - 自贸区指南", "url": "https://www.dmcc.ae/", "type": "official"}
+          ]
+        },
+        {
+          "title": "推荐：自贸区公司 (Free Zone)",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "中国出海企业最常用的模式——100%外资持股无保人",
+                "多家知名自贸区可选：DMCC（综合贸易）、JAFZA（物流制造）、DIFC（金融）、ADGM（金融）",
+                "0%企业所得税、0%个人所得税——真正的零税区",
+                "无外汇管制，资金自由进出",
+                "可申请阿联酋长期居留签证（3年，随公司续签）",
+                "自贸区间可互设实体，部分自贸区认可虚拟办公"
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "DMCC - 自贸区优势", "url": "https://www.dmcc.ae/business-licenses", "type": "official"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "registration-requirements",
+      "title": "注册要求与条件",
+      "icon": "📋",
+      "sections": [
+        {
+          "title": "自贸区公司注册核心要求",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["要求项", "具体要求"],
+              "rows": [
+                ["股东", "至少1名股东；可为个人或公司；无国籍限制；可100%外资持股"],
+                ["董事", "至少1名董事；无国籍限制；可由股东兼任"],
+                ["注册地址", "须在自贸区内有实体办公空间（工位/办公室）；部分自贸区接受虚拟办公"],
+                ["注册资本", "各自贸区要求不同：DMCC最低AED 50,000（无须实缴）；JAFZA最低AED 500,000"],
+                ["公司秘书", "自贸区通常不强制（当局提供行政支持）"],
+                ["经营范围", "须选择自贸区允许的经营活动；申请业务许可证（Trade License）"],
+                ["保人", "自贸区公司不需要本地保人（与 mainland 关键区别）"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "DMCC - 注册要求", "url": "https://www.dmcc.ae/business-licenses", "type": "official"},
+            {"name": "JAFZA - 注册要求", "url": "https://www.jafza.ae/", "type": "official"}
+          ]
+        },
+        {
+          "title": "主流自贸区对比",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["自贸区", "最低注册资本", "年费范围", "适合行业"],
+              "rows": [
+                ["DMCC (迪拜多种商品中心)", "AED 50,000", "AED 15,000-25,000/年", "贸易、咨询、科技、大宗商品"],
+                ["JAFZA (杰贝阿里自贸区)", "AED 500,000", "AED 25,000-50,000/年", "物流、制造、仓储、贸易"],
+                ["DIFC (迪拜国际金融中心)", "视业务而定", "AED 20,000-50,000/年", "金融科技、银行、保险、投资"],
+                ["ADGM (阿布扎比全球市场)", "视业务而定", "AED 15,000-40,000/年", "金融、资管、Fintech"],
+                ["IFZA (国际自贸区)", "无", "AED 12,000-18,000/年", "跨境电商、IT、咨询、服务"],
+                ["RAKEZ (哈伊马角经济区)", "无", "AED 10,000-15,000/年", "低成本选项，各类商业活动"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "UAE Government - 自贸区列表", "url": "https://u.ae/en/information-and-services/business/free-zones", "type": "official"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "registration-process",
+      "title": "注册流程与步骤",
+      "icon": "📝",
+      "sections": [
+        {
+          "title": "注册步骤总览（以DMCC自贸区为例）",
+          "content": [
+            {
+              "type": "steps",
+              "steps": [
+                {"step": 1, "title": "选择业务类型和自贸区", "desc": "根据业务需求选择最合适的自贸区。贸易类首选DMCC，金融类首选DIFC，制造/物流首选JAFZA。", "duration": "1-3天", "fee": "免费"},
+                {"step": 2, "title": "提交注册申请", "desc": "向自贸区管理局提交公司注册申请，包括业务计划书、股东/董事护照复印件、经营范围说明。", "duration": "3-5个工作日", "fee": "约AED 5,000-10,000（申请费）"},
+                {"step": 3, "title": "公司名称核准", "desc": "自贸区核准公司名称，DMCC签发名称预留证书。名称须符合阿联酋命名规则。", "duration": "1-2个工作日", "fee": "含在注册费内"},
+                {"step": 4, "title": "签署法律文件", "desc": "签署公司设立协议（Memorandum of Association）及其他法律文件。部分自贸区支持远程签署。", "duration": "即时", "fee": "免费"},
+                {"step": 5, "title": "领取执照", "desc": "支付全部费用后领取：(1) 营业执照 (Trade License)；(2) 租赁合同 (Office/Desk Space)。", "duration": "1-3个工作日", "fee": "DMCC约AED 30,000-50,000（含1年工位+执照）"},
+                {"step": 6, "title": "后续事项", "desc": "开设银行账户；申请阿联酋居留签证（如需要）；开立企业账户；注册VAT（年营业额超AED 375,000）。", "duration": "2-6周", "fee": "签证约AED 3,000-5,000/人"}
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "DMCC - 注册流程", "url": "https://www.dmcc.ae/business-licenses", "type": "official"}
+          ]
+        },
+        {
+          "title": "注册费用汇总（DMCC参考）",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["费用项目", "金额（AED）"],
+              "rows": [
+                ["DMCC营业执照（含1年工位）", "30,000-50,000"],
+                ["公司注册申请费", "5,000-10,000"],
+                ["VAT注册", "免费"],
+                ["企业银行开户（费用）", "0-2,000"],
+                ["居留签证（每人）", "3,000-5,000"],
+                ["年度续费（含工位）", "15,000-25,000/年"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "DMCC - 费用表", "url": "https://www.dmcc.ae/fee-calculator", "type": "official"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "post-registration",
+      "title": "注册后合规义务",
+      "icon": "✅",
+      "sections": [
+        {
+          "title": "年度合规要求",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["义务", "频率", "说明"],
+              "rows": [
+                ["执照续期 (License Renewal)", "每年", "每年向自贸区续期营业执照，更新公司信息及租赁合同"],
+                ["审计报告", "每年", "自贸区公司须提交经审计的财务报表（DMCC要求）"],
+                ["税务申报", "每年", "年利润超AED 375,000须缴纳9%企业所得税；VAT每季度申报"],
+                ["经济实质要求 (ESR)", "每年", "须在迪拜有实际经营场所和核心收入来源（非纯壳要求）"],
+                ["受益所有人登记", "每年", "向自贸区申报受益所有人（UBO）信息"],
+                ["签证续期", "2-3年", "居留签证须按时续期，通常随公司执照续签"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "UAE Government - 税务合规", "url": "https://u.ae/en/information-and-services/finance-and-investment/taxation", "type": "official"},
+            {"name": "DMCC - 合规指南", "url": "https://www.dmcc.ae/", "type": "official"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bank-account",
+      "title": "企业银行开户",
+      "icon": "🏦",
+      "sections": [
+        {
+          "title": "开户基本要求",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "营业执照 (Trade License)原件或认证副本",
+                "公司设立文件（Memorandum of Association）",
+                "自贸区注册证书",
+                "股东/董事的有效护照及阿联酋ID（如有）",
+                "股东/董事的个人简历及从业背景",
+                "公司业务计划书（含预期交易量、交易对手说明）",
+                "资金来源证明",
+                "关联公司营业执照和银行流水（如有内地公司）"
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": " UAE Central Bank - 开户指引", "url": "https://www.centralbank.ae/", "type": "official"}
+          ]
+        },
+        {
+          "title": "主流银行对比",
+          "content": [
+            {
+              "type": "table",
+              "headers": ["银行", "最低存款", "开户周期", "开户难度", "特点"],
+              "rows": [
+                ["Emirates NBD", "AED 100,000-300,000", "2-6周", "高", "阿联酋最大银行；适合大额交易"],
+                ["Mashreq Bank", "AED 50,000-100,000", "2-4周", "中高", "数字银行体验好；中小企业友好"],
+                ["ADCB", "AED 50,000-100,000", "2-4周", "中", "阿布扎比银行；信用产品丰富"],
+                ["RAKBANK", "AED 25,000-50,000", "1-3周", "较低", "中小企业友好；开户门槛最低之一"],
+                ["Wio (数字银行)", "AED 0", "1-2周", "较低", "阿联酋数字银行；在线开户；适合初创"],
+                ["Zand (数字银行)", "AED 0", "1-2周", "较低", "数字银行；支持多币种；全程在线"]
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "UAE Central Bank - 银行列表", "url": "https://www.centralbank.ae/en/regulated-entities", "type": "official"}
+          ]
+        },
+        {
+          "title": "开户注意事项",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "迪拜银行开户审核严格，建议找专业公司协助（company formation agent可推荐银行关系）",
+                "董事通常须亲临迪拜面签（部分银行接受视频面签）",
+                "营业执照拿到后尽快开户——部分银行要求公司注册后3个月内完成开户",
+                "最低存款要求较高（AED 50,000-300,000），对比香港和新加坡更贵",
+                "纯空壳公司很难开户——建议在自贸区租实体办公室而非仅用虚拟工位",
+                "数字银行（Wio/Zand）门槛低，但交易额度有限，大额建议传统银行",
+                "阿联酋本地银行账户可开立多币种（AED、USD、EUR、GBP）"
+              ]
+            }
+          ],
+          "lastVerified": "2026-06-04",
+          "sources": [
+            {"name": "UAE Central Bank - 消费者保护", "url": "https://www.centralbank.ae/", "type": "official"}
+          ]
+        }
+      ]
+    }
+  ]
+}

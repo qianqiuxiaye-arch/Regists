@@ -1,0 +1,224 @@
+{
+  "projectName": "Regists 出海指南",
+  "checkInterval": "monthly",
+  "checkDay": 1,
+  "lastCheck": "2026-06-25T02:19:43.004807+00:00",
+  "regions": [
+    {
+      "id": "hong-kong",
+      "sources": [
+        {
+          "url": "https://www.cr.gov.hk/sc/home/",
+          "name": "香港公司注册处",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "7a51d076e93bf090",
+          "lastChecked": "2026-06-25T02:20:04.413621+00:00"
+        },
+        {
+          "url": "https://www.cr.gov.hk/sc/services/register-company.htm",
+          "name": "公司注册流程",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "d7e0b87589564ae2",
+          "lastChecked": "2026-06-25T02:20:09.283195+00:00"
+        },
+        {
+          "url": "https://www.ird.gov.hk/chs/tax/bre.htm",
+          "name": "税务局商业登记",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "5b496830a7513cbd",
+          "lastChecked": "2026-06-25T02:20:27.446426+00:00"
+        },
+        {
+          "url": "https://www.elegislation.gov.hk/hk/cap622",
+          "name": "公司条例（第622章）",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "b361095d56992468",
+          "lastChecked": "2026-06-25T02:20:47.588937+00:00"
+        }
+      ]
+    },
+    {
+      "id": "singapore",
+      "sources": [
+        {
+          "url": "https://www.acra.gov.sg/register/business/",
+          "name": "ACRA 公司注册",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "8bf33a3194c460a7",
+          "lastChecked": "2026-06-25T02:21:02.740499+00:00"
+        },
+        {
+          "url": "https://www.acra.gov.sg/register/",
+          "name": "ACRA 注册服务",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "a3a9790aba2a4c17",
+          "lastChecked": "2026-06-25T02:21:16.485668+00:00"
+        },
+        {
+          "url": "https://www.gobusiness.gov.sg/resources/start-up-guide/",
+          "name": "GoBusiness 创业指南",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "f03ce153d73ce8c1",
+          "lastChecked": "2026-06-25T02:21:49.105646+00:00"
+        },
+        {
+          "url": "https://www.iras.gov.sg/taxes/corporate-income-tax",
+          "name": "IRAS 企业税务",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "937c2b5f43d56359",
+          "lastChecked": "2026-06-25T02:22:00.086547+00:00"
+        },
+        {
+          "url": "https://www.mas.gov.sg/regulation/notices/notice-626",
+          "name": "MAS Notice 626",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "f223474d6cc03808",
+          "lastChecked": "2026-06-25T02:22:06.313991+00:00"
+        }
+      ]
+    },
+    {
+      "id": "us",
+      "sources": [
+        {
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed/business-structures",
+          "name": "IRS 企业结构",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "7c25c202fddb08aa",
+          "lastChecked": "2026-06-25T02:22:09.914685+00:00"
+        },
+        {
+          "url": "https://www.sba.gov/business-guide/launch-your-business/choose-business-structure",
+          "name": "SBA 选择公司结构",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "8df5e147a9316cb4",
+          "lastChecked": "2026-06-25T02:22:19.936603+00:00"
+        },
+        {
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online",
+          "name": "IRS EIN 申请",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "d494c7582540aa43",
+          "lastChecked": "2026-06-25T02:23:07.528457+00:00"
+        },
+        {
+          "url": "https://www.fincen.gov/boi",
+          "name": "FinCEN BOI申报",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "353759cbda4ad419",
+          "lastChecked": "2026-06-25T02:23:12.261330+00:00"
+        },
+        {
+          "url": "https://www.corp.delaware.gov/",
+          "name": "特拉华州公司处",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "e65aec1c11e4329e",
+          "lastChecked": "2026-06-25T02:23:17.273866+00:00"
+        },
+        {
+          "url": "https://wyobiz.wy.gov/",
+          "name": "怀俄明州公司注册",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "a689cc417f3472a6",
+          "lastChecked": "2026-06-25T02:23:22.871057+00:00"
+        }
+      ]
+    },
+    {
+      "id": "uk",
+      "sources": [
+        {
+          "url": "https://www.gov.uk/government/organisations/companies-house",
+          "name": "Companies House",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "d113c48933c12039",
+          "lastChecked": "2026-06-25T02:23:32.886478+00:00"
+        },
+        {
+          "url": "https://www.gov.uk/government/organisations/hm-revenue-customs",
+          "name": "HMRC",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "bf9ed665dabf6030",
+          "lastChecked": "2026-06-25T02:23:51.609497+00:00"
+        },
+        {
+          "url": "https://www.gov.uk/set-up-business",
+          "name": "UK Gov 创业指南",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "d013c554100e2941",
+          "lastChecked": "2026-06-25T02:23:54.737993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "dubai",
+      "sources": [
+        {
+          "url": "https://www.dmcc.ae/",
+          "name": "DMCC",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "818d7c73dc6ab9e1",
+          "lastChecked": "2026-06-25T02:24:02.643857+00:00"
+        },
+        {
+          "url": "https://www.jafza.ae/",
+          "name": "JAFZA",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": "c645e6c3d74c1efc",
+          "lastChecked": "2026-06-25T02:24:16.021628+00:00"
+        },
+        {
+          "url": "https://u.ae/",
+          "name": "UAE Government",
+          "type": "official",
+          "checkMethod": "hash",
+          "lastModified": null,
+          "lastHash": null,
+          "lastChecked": "2026-06-25T02:24:19.438940+00:00"
+        }
+      ]
+    }
+  ],
+  "sources": {},
+  "lastResults": {}
+}
